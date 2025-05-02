@@ -72,7 +72,6 @@ export const refreshUser = createAsyncThunk(
       const response = await axios.get("/users/current");
       return response.data;
     } catch (e) {
-      toast.error("Error refreshing user data!");
       return thunkAPI.rejectWithValue(e.message);
     }
   }
